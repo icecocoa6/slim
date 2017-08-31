@@ -3936,6 +3936,8 @@ label_skip_data_atom:
                                  lmn_hyperlink_at_to_hl(LMN_SATOM(wt(rc, func1)))))
           return FALSE;
         break;
+      case LMN_SP_ATOM_ATTR:
+          if (!SP_ATOM_EQ(wt(rc, func0), wt(rc, func1))) return FALSE;
       default:
         if (wt(rc, func0) != wt(rc, func1)) return FALSE;
         break;
@@ -3964,6 +3966,8 @@ label_skip_data_atom:
                                   lmn_hyperlink_at_to_hl(LMN_SATOM(wt(rc, func1)))))
             return FALSE;
           break;
+        case LMN_SP_ATOM_ATTR:
+          if (SP_ATOM_EQ(wt(rc, func0), wt(rc, func1))) return FALSE;
         default:
           if (wt(rc, func0) == wt(rc, func1)) return FALSE;
           break;
