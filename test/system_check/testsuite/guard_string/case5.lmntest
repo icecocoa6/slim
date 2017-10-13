@@ -1,3 +1,0 @@
-neq($s, $t) :- string($s), unary($t), $s \= $t | yes. neq("hello", 'hello'). 
-yes. 
-ok
